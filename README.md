@@ -13,11 +13,13 @@ I think you are so understand SQL developing, but I still want to enhance INDEX 
 
 3. From Maintaining View <br>
 One big-data table is very slow for any database. So oracle introduced partitioned tables long times ago. MySQL copy this idea since version 5.x. If you don’t use it now, I strong recommend you could use this rocket skill. It could improve query and insert function remarkably. Simply explanation, this technology will save your one table data into several piece files on disk and have a special index to fast your query speed and reduce your IO & CPU usage. We do this strategy in every database.<br>
-![image](https://raw.githubusercontent.com/wuqunfei/highPerformanceMySQLApp/master/partitioned.png)
- Beside Partition, replication is the foundation for building large, high-performance applications on top of MySQL, using the so-called “scale-out” architecture. There are so many documents on Google easily.<br>
+![image](https://raw.githubusercontent.com/wuqunfei/highPerformanceMySQLApp/master/partitioned.png)<br>
+Beside Partition, replication is the foundation for building large, high-performance applications on top of MySQL, using the so-called “scale-out” architecture. There are so many documents on Google easily.<br>
 ![image](https://raw.githubusercontent.com/wuqunfei/highPerformanceMySQLApp/master/Sync.png)<br>
 My team uses it in production environment. It’s easy to configure and build this architecture. But for my experience,  MySQL 5.X still need to improve their production, specially in Sync data from master to replica when exception of network or system restart. Owning to this disadvantage, we write automotive-sync-tools instead of MySQL sync when it was broken.<br>
 
+
+At last, hope my suggestion could make you clean and easy to improve your performance in Mysql, I am an IT engineer in Alcatel-Lucent Group in Shanghai. Contact me: http://de.linkedin.com/in/wuqunfei
 
 
 
